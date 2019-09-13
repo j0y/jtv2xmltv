@@ -4,7 +4,9 @@ Converts jtv file to xml. Written in Go. Converts 1Mb jtv file in 0.5s compared 
 jtv2xmltv in repository build with go1.4 for CentOS 5
 
 # Usage
+```
 jtv2xmltv file.zip > output.xml
+```
 
 # Compilation for CentOS 5
 install https://github.com/moovweb/gvm and its dependencies
