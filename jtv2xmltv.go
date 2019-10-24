@@ -114,7 +114,7 @@ func parseTitles(data string) []string {
 	data = data[26:]
 	var titles []string
 
-	for len(data) > 26 {
+	for len(data) > 0 {
 		var titleLength int
 		titleLength = int(binary.LittleEndian.Uint16([]byte(data[0:2])))
 		data = data[2:]
