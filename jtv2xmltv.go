@@ -74,13 +74,14 @@ func main() {
 		}
 
 		for i, curTitle := range channelTitles {
+			var start time.Time
+			var stop time.Time
 			if i < len(channelSchedules)-1 {
-				start := channelSchedules[i]
-				stop := channelSchedules[i+1]
-				i++
+				start = channelSchedules[i]
+				stop = channelSchedules[i+1]
 			} else {
-				start := channelSchedules[i]
-				stop := channelSchedules[i]
+				start = channelSchedules[i]
+				stop = channelSchedules[i]
 			}
 			progr := Programme{Channel: strconv.Itoa(channelID), Start: string(start.Format("20060102150405")), Stop: string(stop.Format("20060102150405")), Title: curTitle}
 			tv.Programme = append(tv.Programme, progr)
