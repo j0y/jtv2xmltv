@@ -72,8 +72,8 @@ func main() {
 			schedContents := schedBuf.String()
 			channelSchedules = parseSchedule(schedContents)
 		}
-		i := 0
-		for _, curTitle := range channelTitles {
+
+		for i, curTitle := range channelTitles {
 			if i < len(channelSchedules)-1 {
 				start := channelSchedules[i]
 				stop := channelSchedules[i+1]
